@@ -102,9 +102,14 @@
     var myCarousel =  document.getElementById('carouselId');
     myCarousel.addEventListener('slide.bs.carousel', function(){
     console.log('Změna obrázku');
+    let r = Math.floor(Math.random() * 256)
+    let b = Math.floor(Math.random() * 256)
+    let g = Math.floor(Math.random() * 256)
     let number = Math.floor(Math.random() * 256);
-    let color = `rgb(${number}, ${number}, ${number})`;
+    let color = `rgb(${r}, ${g}, ${b})`;
     document.querySelector('body').style.backgroundColor = color;
+    document.querySelector('body').style.color = color;
+    document.querySelector("h1").style.setProperty("color", color, "important");
     })
 </script> 
 </body>
